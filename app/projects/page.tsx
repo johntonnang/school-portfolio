@@ -37,12 +37,29 @@ export default function Home() {
     }
   }
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const projectsData = await getProjects()
+  //     const aboutData = await getAbout()
+  //     setProjectsData(projectsData)
+  //     setAboutData(aboutData)
+  //   }
+
+  //   fetchData()
+  // }, [])
+
   useEffect(() => {
     const fetchData = async () => {
-      const projectsData = await getProjects()
-      const aboutData = await getAbout()
-      setProjectsData(projectsData)
-      setAboutData(aboutData)
+      try {
+        const response = await fetch("/api/projects")
+        const projectsData = await response.json()
+        setProjectsData(projectsData)
+
+        const aboutData = await getAbout()
+        setAboutData(aboutData)
+      } catch (error) {
+        console.error("Error fetching data:", error)
+      }
     }
 
     fetchData()
