@@ -12,10 +12,8 @@ const Education: React.FC<EducationProps> = ({ educations }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY)
       const scrollPosition = window.scrollY
       const triggerPosition = window.innerWidth < 768 ? 1400 : 1900
-      // const triggerPosition = 1900
 
       setIsScrolled(scrollPosition > triggerPosition)
     }

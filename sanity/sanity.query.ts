@@ -60,13 +60,12 @@ export async function getProjects() {
   }
 }
 
-export async function getProjectByTitle(projectTitle: any) {
+export async function getProjectByTitle(projectTitle: string) {
   try {
     return client.fetch(
       groq`*[_type == "projects" && projectTitle == $projectTitle][0] {
            _id,
            projectTitle,
-          //  projectImage { alt, "image": asset->url },
           projectImage[] {
             alt,
             "image": image.asset->url,
@@ -79,6 +78,5 @@ export async function getProjectByTitle(projectTitle: any) {
     )
   } catch (error) {
     console.error({ message: "Error when fetching project data by title." })
-    return null
   }
 }
