@@ -9,12 +9,12 @@ import Menu from "../../components/Menu"
 import Image from "next/image"
 import Link from "next/link"
 
-// type ProjectProps = {
-//   projectData: ProjectsType
-//   params: {
-//     projectTitle: string
-//   }
-// }
+type ProjectProps = {
+  projectData: ProjectsType
+  params: {
+    projectTitle: string
+  }
+}
 
 const Project: React.FC<ProjectProps> = ({ params }) => {
   const router = useRouter()

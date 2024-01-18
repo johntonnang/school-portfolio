@@ -25,6 +25,7 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "files": [
-    "@types/block-content-to-react.d.ts"
+    "@types/block-content-to-react.d.ts",
+    "./app/projects/Home.tsx"
   ]
 }

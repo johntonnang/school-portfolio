@@ -48,17 +48,22 @@ export default function Home() {
     fetchData()
   }, [])
 
-  const uniqueTechStacks: string[] = projectsData.reduce(
-    (uniqueTechs, category) => {
-      category.techStack.forEach((tech) => {
-        if (!uniqueTechs.includes(tech as string)) {
-          uniqueTechs.push(tech as string)
-        }
-      })
+  // const uniqueTechStacks = projectsData.reduce((uniqueTechs, category) => {
+  //   category.techStack.forEach((tech) => {
+  //     if (!uniqueTechs.includes(tech)) {
+  //       uniqueTechs.push(tech)
+  //     }
+  //   })
+  //   return uniqueTechs
+  // }, [])
+  const uniqueTechStacks: string[] = projectsData
+    .flatMap((category) => category.techStack)
+    .reduce((uniqueTechs, tech) => {
+      if (!uniqueTechs.includes(tech)) {
+        uniqueTechs.push(tech)
+      }
       return uniqueTechs
-    },
-    [] as string[]
-  )
+    }, [])
 
   return (
     <>
