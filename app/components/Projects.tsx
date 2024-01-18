@@ -11,6 +11,8 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
     return <p>No information available.</p>
   }
 
+  console.log(data.projectImage)
+
   return (
     <>
       <div className="w-full h-full mb-6 items-center">

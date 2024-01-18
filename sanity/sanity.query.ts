@@ -48,7 +48,7 @@ export async function getProjects() {
         _id,
         projectTitle,
         projectImage[]{
-          "image": image.asset->url
+          "image": image.asset->url,
         },
         description,
         techStack,
