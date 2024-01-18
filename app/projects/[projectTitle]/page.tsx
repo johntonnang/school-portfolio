@@ -4,7 +4,6 @@ import { getAbout } from "@/sanity/sanity.query"
 import type { ProjectsType } from "@/types"
 import type { AboutType } from "@/types"
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
 import Menu from "../../components/Menu"
 import Image from "next/image"
 import Link from "next/link"
@@ -16,8 +15,7 @@ type ProjectProps = {
   }
 }
 
-const Project: React.FC<ProjectProps> = ({ params }) => {
-  const router = useRouter()
+export default function Project({ params }: ProjectProps) {
   const { projectTitle } = params
   const [projectData, setProjectData] = useState<ProjectsType | null>(null)
   const [aboutData, setAboutData] = useState<AboutType | null>(null)
@@ -92,5 +90,3 @@ const Project: React.FC<ProjectProps> = ({ params }) => {
     </>
   )
 }
-
-export default Project
