@@ -31,7 +31,7 @@ export default function Home() {
     setSearchResults(results)
   }
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: { key: string }) => {
     if (e.key === "Enter") {
       handleSearch()
     }
