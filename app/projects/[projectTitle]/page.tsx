@@ -15,9 +15,6 @@ type ProjectProps = {
     projectTitle: string
   }
 }
-type AboutProps = {
-  aboutData: AboutType
-}
 
 const Project: React.FC<ProjectProps> = ({ params }) => {
   const router = useRouter()
