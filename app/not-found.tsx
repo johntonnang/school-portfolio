@@ -52,7 +52,8 @@ export default function Custom404() {
       <main className="bg-background-light w-full h-[100vh] p-6 lg:p-16">
         <section className="flex flex-col justify-center">
           <h1 className="text-3xl text-orange-dark font-bold tracking-tight mb-6 leading-tight md:mb-16 md:text-5xl xl:text-7xl">
-            Sorry, that page doesn't exist. Try searching for a different route
+            Sorry, that page doesn&apos;t exist. Try searching for a different
+            route
           </h1>
           <div className="flex gap-4 mb-4">
             <input
