@@ -6,7 +6,6 @@ import Menu from "./components/Menu"
 import Hero from "./components/Hero"
 import Experience from "./components/Experience"
 import Education from "./components/Education"
-import Skills from "./components/Skills"
 
 export default async function Home() {
   const profileData: ProfileType[] = await getProfile()
@@ -29,7 +28,6 @@ export default async function Home() {
                 <Hero data={data} />
                 <Experience experiences={data.experience} />
                 <Education educations={data.education} />
-                {/* <Skills skills={data.skills} /> */}
               </div>
             ))}
         </section>
