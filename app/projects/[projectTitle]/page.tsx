@@ -10,12 +10,13 @@ import Link from "next/link"
 
 type ProjectProps = {
   projectData: ProjectsType
-  params: {
-    projectTitle: string
-  }
 }
 
-export default function Project({ params }: ProjectProps) {
+export default function Project({
+  params,
+}: {
+  params: { projectTitle: string }
+}) {
   const { projectTitle } = params
   const [projectData, setProjectData] = useState<ProjectsType | null>(null)
   const [aboutData, setAboutData] = useState<AboutType | null>(null)
