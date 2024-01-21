@@ -177,42 +177,7 @@ const Menu: React.FC<MenuProps> = ({ socials, email, number }) => {
             </span>
           </Link>
         </div>
-        <div className="flex flex-col gap-4 mb-4 md:w-1/2 md:mb-8">
-          {/* <div className="overflow-hidden h-12 relative">
-            <h2
-              className={`slide-up text-4xl font-semibold absolute md:text-5xl transition-colors duration-700 ${
-                isScrolled ? "text-background-purple-tint" : "text-light"
-              }`}
-            >
-              Socials
-            </h2>
-          </div> */}
-          {/* <ul className="flex">
-            {Object.entries(socials).map(([platform, url], id, array) => (
-              <li
-                key={id}
-                className="grid grid-cols-3 items-center overflow-hidden w-full h-8 relative md:h-10"
-              >
-                <Link
-                  className={`link capitalize slide-up font-semibold absolute text-decoration-none text-lg md:text-2xl transition-colors duration-700 ${
-                    isScrolled ? "text-background-purple-tint" : "text-light"
-                  }`}
-                  href={url}
-                  style={{
-                    justifySelf:
-                      id === 0
-                        ? "start"
-                        : id === array.length - 1
-                        ? "end"
-                        : "center",
-                  }}
-                >
-                  {platform}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
-        </div>
+        <div className="flex flex-col gap-4 mb-4 md:w-1/2 md:mb-8"></div>
         <div className="flex flex-col gap-4 md:w-1/2">
           <div className="overflow-hidden h-14 relative">
             <Link
